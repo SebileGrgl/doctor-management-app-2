@@ -1,0 +1,31 @@
+@import "@/styles/abstracts/index.scss";
+
+.patientsPageContainer {
+  h1 {
+    font-size: 22px;
+  }
+  .filterOptions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .newPatientBtn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 250px;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: $purple-color;
+    color: $secondary-font-color;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($purple-color, 10%);
+    }
+    strong {
+      font-size: 18px;
+    }
+  }
+}

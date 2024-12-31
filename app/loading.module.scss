@@ -1,0 +1,68 @@
+@import "@/styles/abstracts/index.scss";
+
+@keyframes moveGradient {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+.loader {
+  overflow: hidden;
+  background: #c3c3c354;
+  border-radius: 8px;
+  & > .gradient {
+    width: 20%;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      #eeeeee,
+      transparent
+    );
+    animation-name: moveGradient;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: auto;
+  height: 100vh;
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  background-color: $secondary-bg;
+  padding: 18px 25px;
+
+  .header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+
+    .row1,
+    .row2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+    .leftCol {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+  }
+}

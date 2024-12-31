@@ -1,0 +1,73 @@
+@import "@/styles/abstracts/index.scss";
+
+.patientAnalyticsContainer {
+  min-width: 270px;
+
+  .titleBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    select {
+      padding: 6px;
+      border-radius: 4px;
+      outline: none;
+      border: none;
+      font-size: 14px;
+      color: $tertiary-font-color;
+    }
+  }
+
+  .patientAnalytics {
+    margin-top: 15px;
+    padding: 25px 15px;
+    background-color: $primary-bg;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    .analytics {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      .newPatientIcon {
+        padding: 6px;
+        background-color: rgba($blue-color, 0.3);
+        border-radius: 50%;
+      }
+      .oldPatientIcon {
+        padding: 5px;
+        background-color: rgba($orange-color, 0.3);
+        border-radius: 50%;
+      }
+      .analyticDetails {
+        width: 100%;
+        .patientPercentage {
+          width: 100%;
+          span {
+            font-weight: 800;
+          }
+          p {
+            margin-top: 5px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .patientAnalyticsContainer {
+    height: auto;
+  }
+}

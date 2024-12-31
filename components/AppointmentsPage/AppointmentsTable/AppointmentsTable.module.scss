@@ -1,0 +1,68 @@
+@import "@/styles/abstracts/index.scss";
+.appointmentListContainer {
+  overflow: auto;
+  .appointmentsTable {
+    width: 100%;
+    background-color: $primary-bg;
+    border-radius: 8px;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    .patientInfo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      img {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+      }
+    }
+    th {
+      text-align: start;
+    }
+    tr {
+      border: 1px solid $tertiary-bg;
+    }
+    td,
+    th {
+      padding: 10px;
+    }
+    .appointmentRows {
+      font-size: 14px;
+      &:hover {
+        background-color: $tertiary-bg;
+      }
+    }
+    .completed {
+      background-color: rgba($blue-color, 0.1);
+      color: $blue-color;
+    }
+    .cancelled {
+      background-color: rgba($red-color, 0.1);
+      color: $red-color;
+    }
+    .pending {
+      background-color: rgba($purple-color, 0.1);
+      color: $purple-color;
+    }
+
+    .completed,
+    .cancelled,
+    .pending {
+      border: none;
+      border-radius: 8px;
+      padding: 5px;
+      outline: none;
+    }
+
+    .detailsBtn,
+    .deleteIcon {
+      filter: invert(60%);
+      cursor: pointer;
+      &:hover {
+        filter: invert(0);
+      }
+    }
+  }
+}

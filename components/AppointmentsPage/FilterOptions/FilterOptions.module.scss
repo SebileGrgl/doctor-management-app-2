@@ -1,0 +1,38 @@
+@import "@/styles/abstracts/index.scss";
+
+.filterOptions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  .searchbarContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background-color: $primary-bg;
+    padding: 10px;
+    width: 25%;
+    min-width: 200px;
+    input {
+      background-color: inherit;
+      border: none;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+    .searchIcon {
+      filter: invert(30%);
+    }
+  }
+}
+
+.filterBtnContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: $primary-bg;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}

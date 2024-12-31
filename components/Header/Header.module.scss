@@ -1,0 +1,93 @@
+.sidebarContainer {
+  .sidebar {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+
+    aside {
+      display: block;
+      position: static;
+    }
+
+    .closeIcon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      opacity: 0.5;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .toggledSidebar {
+    transform: translateX(0);
+  }
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  .menuIcon {
+    display: none;
+  }
+
+  .searchbar {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+
+    .searchIcon {
+      filter: invert(30%);
+    }
+    input {
+      background-color: inherit;
+      border: none;
+      width: 100%;
+      outline: none;
+    }
+  }
+
+  .userInfoBox {
+    display: flex;
+    align-items: center;
+
+    img {
+      border-radius: 50%;
+    }
+    .userInfoTitles {
+      margin-left: 12px;
+
+      .userName {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .specialty {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .headerContainer {
+    .menuIcon {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContainer {
+    .searchbar {
+      display: none;
+    }
+  }
+}

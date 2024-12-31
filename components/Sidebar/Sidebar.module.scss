@@ -1,0 +1,54 @@
+@import "@/styles/abstracts/index.scss";
+
+.sidebarContainer {
+  height: 100vh;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 225px;
+  background-color: $primary-bg;
+
+  .logoBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    .logo {
+      padding: 15px;
+    }
+  }
+  .sidebarLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 15px;
+      font-size: 14px;
+      color: $primary-font-color;
+      &:hover {
+        background-color: $tertiary-bg;
+        border-radius: 8px;
+      }
+    }
+    .active {
+      background-color: black !important;
+      border-radius: 8px;
+      color: $secondary-font-color !important;
+      .linkIcon {
+        filter: invert(100%);
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebarContainer {
+    width: 300px;
+    display: none;
+    padding: 70px 15px;
+  }
+}

@@ -1,0 +1,98 @@
+@import "@/styles/abstracts/index.scss";
+.appointmentListContainer {
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+
+    .filterBtnContainer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: $primary-bg;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+  .appointmentsTableContainer {
+    width: 100%;
+    min-height: 200px;
+    max-height: 500px;
+    background-color: $primary-bg;
+    border-radius: 8px;
+    margin-top: 10px;
+    overflow: auto;
+
+    .noAppointmentsTitle {
+      padding: 20px;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+
+      .patientInfo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+        }
+      }
+      th {
+        text-align: start;
+      }
+      tr {
+        border: 1px solid $tertiary-bg;
+      }
+      td,
+      th {
+        padding: 10px;
+      }
+      .appointmentRows {
+        font-size: 14px;
+        &:hover {
+          background-color: $tertiary-bg;
+        }
+      }
+      .completed {
+        background-color: rgba($blue-color, 0.1);
+        color: $blue-color;
+      }
+      .cancelled {
+        background-color: rgba($red-color, 0.1);
+        color: $red-color;
+      }
+      .pending {
+        background-color: rgba($purple-color, 0.1);
+        color: $purple-color;
+      }
+
+      .completed,
+      .cancelled,
+      .pending {
+        border: none;
+        border-radius: 8px;
+        padding: 5px;
+        outline: none;
+      }
+
+      .detailsBtn {
+        filter: invert(60%);
+        cursor: pointer;
+        &:hover {
+          filter: invert(0);
+        }
+      }
+    }
+  }
+}

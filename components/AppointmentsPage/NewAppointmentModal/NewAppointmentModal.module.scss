@@ -1,0 +1,117 @@
+@import "@/styles/abstracts/index.scss";
+
+.overlayContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 999;
+  background-color: rgba($tertiary-bg, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modalContainer {
+    padding: 28px;
+    background-color: $primary-bg;
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .newAppointmentForm {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .appointmentInfo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        label {
+          flex: 1;
+          font-size: 14px;
+          font-weight: 500;
+        }
+        input,
+        select {
+          flex: 3;
+          padding: 5px;
+          height: 32px;
+          border-radius: 4px;
+          border: none;
+          background-color: $secondary-bg;
+        }
+        .datepickerContainer {
+          flex: 3;
+          & > div {
+            display: block;
+          }
+        }
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-top: 20px;
+        .cancelBtn {
+          @include secondary-btn;
+        }
+        .createBtn {
+          @include primary-btn;
+        }
+      }
+    }
+  }
+}
+
+.custom-datepicker {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.react-datepicker {
+  font-size: 0.875rem;
+  border-radius: 8px;
+}
+
+.react-datepicker__header {
+  background-color: $tertiary-bg;
+  border-bottom: none;
+  padding-top: 0.5rem;
+}
+
+.react-datepicker__current-month {
+  font-weight: bold;
+  color: $primary-font-color;
+}
+
+.react-datepicker__day-name {
+  color: $primary-font-color;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+.react-datepicker__day--today {
+  background-color: #f0f4f8;
+}
+
+.react-datepicker__day--disabled {
+  color: #ccc;
+}

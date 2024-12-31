@@ -1,0 +1,72 @@
+@import "@/styles/abstracts/index.scss";
+
+.loginFormContainer {
+  background-color: $primary-bg;
+  padding: 30px;
+  width: 500px;
+  border-radius: 8px;
+
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    strong {
+      font-size: 20px;
+    }
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  form {
+    margin-top: 40px;
+
+    .loginInput {
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+      color: black;
+      font-size: 1 rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      width: 100%;
+      margin-bottom: 8px;
+      input {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        outline: none;
+        width: 100%;
+        color: $primary-font-color;
+      }
+    }
+    .rememberMe {
+      font-size: 14px;
+      margin: 16px 0 24px;
+    }
+    .loginBtn {
+      @include primary-btn;
+      padding: 15px;
+    }
+    .signupDirection {
+      p {
+        margin: 20px 0 15px;
+        text-align: center;
+      }
+      .signupBtn {
+        @include secondary-btn;
+        padding: 15px;
+        font-size: 14px;
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+  .logoutBtn {
+    padding: 15px;
+
+    @include primary-btn;
+  }
+}

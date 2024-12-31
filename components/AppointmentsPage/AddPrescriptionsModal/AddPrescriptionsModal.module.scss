@@ -1,0 +1,53 @@
+@import "@/styles/abstracts/index.scss";
+
+.medicationForm {
+  .infoBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    label {
+      width: 30%;
+    }
+    & > input,
+    textarea {
+      width: 70%;
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      background-color: $secondary-bg;
+      outline: none;
+    }
+
+    .dateInputs {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+      .datepickerContainer {
+        flex: 1;
+        input {
+          padding: 10px;
+          border-radius: 4px;
+          border: none;
+          background-color: $secondary-bg;
+        }
+      }
+    }
+  }
+  .noteSection {
+    align-items: start;
+    .noteInput {
+      resize: none;
+      overflow-y: hidden;
+    }
+  }
+  .button {
+    text-align: end;
+    margin-top: 10px;
+    input {
+      @include primary-btn;
+      width: 70%;
+    }
+  }
+}

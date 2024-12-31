@@ -1,0 +1,16 @@
+@import "@/styles/abstracts/index.scss";
+
+.selectOptionsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  .checkBox {
+    padding: 10px;
+    margin-right: 4px;
+    border-radius: 4px;
+    border: none;
+    background-color: $secondary-bg;
+    outline: none;
+  }
+}

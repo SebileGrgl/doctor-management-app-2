@@ -1,0 +1,50 @@
+@import "@/styles/abstracts/index.scss";
+
+.medicationsSection {
+  flex: 2;
+
+  h3 {
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
+
+  .medicationsTableContainer {
+    width: 100%;
+    background-color: $primary-bg;
+    border-radius: 8px;
+    margin-top: 10px;
+    overflow-y: auto;
+    height: calc(100% - 55px);
+
+    .titleContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      p {
+        padding: 10px;
+      }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      th {
+        text-align: start;
+      }
+      tr {
+        border: 1px solid $tertiary-bg;
+      }
+      td,
+      th {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .medicationsSection {
+    flex: 1;
+  }
+}

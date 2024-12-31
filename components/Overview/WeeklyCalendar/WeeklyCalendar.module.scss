@@ -1,0 +1,95 @@
+@import "@/styles/abstracts/index.scss";
+
+.calendarContainer {
+  width: 100%;
+  height: 130px;
+  border-radius: 8px;
+  margin-top: 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  height: 20px;
+
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.header button {
+  background-color: $primary-bg;
+  color: $tertiary-font-color;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.weekDays {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 15px;
+  height: calc(100% - 35px);
+  background-color: $primary-bg;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: $secondary-bg;
+  border-radius: 4px;
+  flex: 1;
+  height: 60px;
+  cursor: pointer;
+}
+
+.day div:first-child {
+  font-weight: bold;
+  color: $tertiary-font-color;
+}
+
+.day div:last-child {
+  font-size: 14px;
+  margin-top: 5px;
+  color: $tertiary-font-color;
+}
+
+.selected {
+  background-color: $primary-font-color;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  div:first-child {
+    color: $secondary-font-color;
+  }
+  div:last-child {
+    color: $secondary-font-color;
+  }
+}
+
+@media (max-width: 480px) {
+  .weekDays {
+    gap: 5px;
+    .day {
+      padding: 5px;
+      font-size: smaller;
+    }
+  }
+}
